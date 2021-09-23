@@ -119,3 +119,32 @@
 // console.log(findUniq([ 3, 10, 3, 3, 3 ]));
 // console.log(findUniq([ 5, 3, 3, 3, 3 ]));
 // console.log(findUniq([ 3, 3, 3, 3, 8 ]));
+
+
+
+// Move the first letter of each word to the end of it, 
+// then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+// function pigIt(str){
+//         // const arrWords = str.split(' ').map(el => el.split('')).map(el => {
+//         //     const firstLet = el.splice(0, 1)
+//         //     const newWord = el.join('')+firstLet+'ay'
+//         //     return newWord
+//         // }).join(' ')
+//         // console.log(arrWords)
+//     // return str.split(' ').map(el => el.split('')).map(el => {
+//     //     if (!/^[A-Za-z]+$/.test(el.join(''))) return el
+//     //         const firstLet = el.splice(0, 1)
+//     //         return el.join('')+firstLet+'ay'
+//     //     }).join(' ')  // MY SOLUTION
+
+//     //BEST Practice
+//     // return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3") 
+
+//     // return str.replace(/\w+/g, (w) => {
+//     //     return w.slice(1) + w[0] + 'ay';
+//     //   });
+// }
+// console.log(pigIt('Pig latin is cool')) //igPay atinlay siay oolcay
+// console.log(pigIt('This is my string !')) //hisTay siay ymay tringsay
+
