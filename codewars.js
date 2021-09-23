@@ -87,12 +87,35 @@
 // If the input string is empty, return an empty string. 
 // The words in the input String will only contain valid consecutive numbers.
 
-function order(words){
+// function order(words){
 
-    return words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/)).join(' ')
+//     return words.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/)).join(' ')
 
-  }
+//   }
 
-  console.log(order("is2 Thi1s T4est 3a"))
-  console.log(order("4of Fo1r pe6ople g3ood th5e the2"))
-  console.log(order(""))
+//   console.log(order("is2 Thi1s T4est 3a"))
+//   console.log(order("4of Fo1r pe6ople g3ood th5e the2"))
+//   console.log(order(""))
+
+
+// There is an array with some numbers. All numbers are equal except for one. Try to find it!
+// It’s guaranteed that array contains at least 3 numbers.
+// The tests contain some very huge arrays, so think about performance.
+
+// function findUniq(arr) {
+//     // console.log(arr.filter((el, ind, arr) =>
+//     //     arr.indexOf(el) === ind)
+//     // )
+//     // console.log(arr.filter((el, ind, arr) =>
+//     //     arr.lastIndexOf(el) === ind)
+//     // )
+
+//     return arr.find((el) => 
+//          arr.indexOf(el) === arr.lastIndexOf(el)
+//     )
+//   }
+// console.log(findUniq([ 0, 1, 0 ]));
+// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+// console.log(findUniq([ 3, 10, 3, 3, 3 ]));
+// console.log(findUniq([ 5, 3, 3, 3, 3 ]));
+// console.log(findUniq([ 3, 3, 3, 3, 8 ]));
