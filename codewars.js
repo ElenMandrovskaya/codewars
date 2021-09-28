@@ -159,20 +159,87 @@
 // If a string contains all repeating characters, it should return an empty string ("") 
 // or None -- see sample tests.
 
-function firstNonRepeatingLetter(s) {
-    // if (!s) return ''
-    const idx = s
-    .toLowerCase()
-    .split('')
-    .findIndex((el, ind, s) => {
-         return s.indexOf(el) === s.lastIndexOf(el)
-    })
-    return idx === -1 ? '' : s[idx]
-  }
+// function firstNonRepeatingLetter(s) {
+//     // if (!s) return ''
+//     const idx = s
+//     .toLowerCase()
+//     .split('')
+//     .findIndex((el, ind, s) => {
+//          return s.indexOf(el) === s.lastIndexOf(el)
+//     })
+//     return idx === -1 ? '' : s[idx]
+//   }
 
-  console.log(firstNonRepeatingLetter('a'));
-  console.log(firstNonRepeatingLetter('sTress'));
-  console.log(firstNonRepeatingLetter('moonmen'));
-  console.log(firstNonRepeatingLetter('nonononono'));
-  console.log(firstNonRepeatingLetter(''));
+//   console.log(firstNonRepeatingLetter('a'));
+//   console.log(firstNonRepeatingLetter('sTress'));
+//   console.log(firstNonRepeatingLetter('moonmen'));
+//   console.log(firstNonRepeatingLetter('nonononono'));
+//   console.log(firstNonRepeatingLetter(''));
     
+
+// https://www.codewars.com/kata/53db96041f1a7d32dc0004d2/train/javascript
+// function doneOrNot(board){
+// const row = board.map(el => el.filter((el, ind, arr) => arr.indexOf(el) === ind));
+// const isValidRow = row.some(el =>  el.length !== 9);
+// let verticalBoard =[]
+// for (let i=0; i<board.length; i++){
+//      let col = [];
+//      board.map((item) => {
+//        col.push(item[i])
+//      })
+//      verticalBoard.push(col)
+// }
+// const col = verticalBoard.map(el => el.filter((el, ind, arr) => arr.indexOf(el) === ind));
+// const isValidCol = col.some(el =>  el.length !== 9);
+
+// let SqrArr = []
+// const square1 = board.map(el => el.slice(0,3)).slice(0,3).join(',').split(',')
+// SqrArr.push(square1)
+// const square2 = board.map(el => el.slice(3,6)).slice(0,3).join(',').split(',')
+// SqrArr.push(square2)
+// const square3 = board.map(el => el.slice(6,9)).slice(0,3).join(',').split(',')
+// SqrArr.push(square3)
+// const square4 = board.map(el => el.slice(0,3)).slice(3,6).join(',').split(',')
+// SqrArr.push(square4)
+// const square5 = board.map(el => el.slice(3,6)).slice(3,6).join(',').split(',')
+// SqrArr.push(square5)
+// const square6 = board.map(el => el.slice(6,9)).slice(3,6).join(',').split(',')
+// SqrArr.push(square6)
+// const square7 = board.map(el => el.slice(0,3)).slice(6,9).join(',').split(',')
+// SqrArr.push(square7)
+// const square8 = board.map(el => el.slice(3,6)).slice(6,9).join(',').split(',')
+// SqrArr.push(square8)
+// const square9 = board.map(el => el.slice(6,9)).slice(6,9).join(',').split(',')
+// SqrArr.push(square9)
+
+// const sqr = SqrArr.map(el => el.filter((el, ind, arr) => arr.indexOf(el) === ind));
+// const isValidSqr = sqr.some(el =>  el.length !== 9);
+
+// if (isValidRow || isValidCol || isValidSqr) {
+//      return "Try again!"
+// }
+// return "Finished!"
+// }
+
+
+// console.log(doneOrNot([
+//      [5, 3, 4, 6, 7, 8, 9, 1, 2], 
+//      [6, 7, 2, 1, 9, 5, 3, 4, 8],
+//      [1, 9, 8, 3, 4, 2, 5, 6, 7],
+//      [8, 5, 9, 7, 6, 1, 4, 2, 3],
+//      [4, 2, 6, 8, 5, 3, 7, 9, 1],
+//      [7, 1, 3, 9, 2, 4, 8, 5, 6],
+//      [9, 6, 1, 5, 3, 7, 2, 8, 4],
+//      [2, 8, 7, 4, 1, 9, 6, 3, 5],
+//      [3, 4, 5, 2, 8, 6, 1, 7, 9]])); //"Finished!")
+            
+// console.log(doneOrNot([
+//      [5, 3, 4, 6, 7, 8, 9, 1, 2], 
+//      [6, 7, 2, 1, 9, 0, 3, 4, 9],
+//      [1, 0, 0, 3, 4, 2, 5, 6, 0],
+//      [8, 5, 9, 7, 6, 1, 0, 2, 0],
+//      [4, 2, 6, 8, 5, 3, 7, 9, 1],
+//      [7, 1, 3, 9, 2, 4, 8, 5, 6],
+//      [9, 0, 1, 5, 3, 7, 2, 1, 4],
+//      [2, 8, 7, 4, 1, 9, 6, 3, 5],
+//      [3, 0, 0, 4, 8, 1, 1, 7, 9]])); //"Try again!")
